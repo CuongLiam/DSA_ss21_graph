@@ -10,7 +10,7 @@ int **initGraph(int n) {
     return graph;
 }
 
-void addToGraph(int **graph, int u, int v) {
+void addEdge(int **graph, int u, int v) {
     graph[u][v] = 1;
     graph[v][u] = 1;
 }
@@ -31,7 +31,7 @@ int main(void) {
 
     int a = 0, b = 1;
 
-    addToGraph(graph, a, b);
+    addEdge(graph, a, b);
     displayGraph(graph, n);
 
     free(graph);
